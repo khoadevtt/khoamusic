@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Podcast Playlist</title>
+    <link rel="icon" href="faco.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Podcast Image -->
+        <div class="header">
+            <img src="logo.png" alt="Podcast Image" class="podcast-image">
+            <p class="podcast-title">K/A 07 | Khoa Anh</p> <br>
+            <i>Nhạc được sáng tác bởi ngươi Việt | K/A Studio | Khoa Anh</i>
+        </div>
+
+        <!-- Track List -->
+        <div class="track-list">
+            <div class="track-item" onclick="playTrack('track1', 'Ashes of the Crown.mp3', 'k4.png')">
+                <img src="k4.png" alt="Track Image" class="track-image">
+                <div class="track-info">
+                    <p class="track-title" id="track1-title">Ashes Of The Crown</p>
+                    <p class="track-author" id="track1-author">Khoa Anh | K/A Studio</p>
+                </div>
+                <div class="heart-info">
+                    <span class="material-icons" id="heart1" onclick="toggleHeart(event)">favorite_border</span>
+                    <b>15K</b>
+                </div>
+            </div> 
+        
+            <div class="track-item" onclick="playTrack('track2', 'Ghost of Love.mp3', 'k6.png')">
+                <img src="k6.png" alt="Track Image" class="track-image">
+                <div class="track-info">
+                    <p class="track-title" id="track2-title">Ghost Of Love</p>
+                    <p class="track-author" id="track2-author">Khoa Anh | K/A Studio</p>
+                </div>
+                <div class="heart-info">
+                    <span class="material-icons" id="heart2" onclick="toggleHeart(event)">favorite_border</span>
+                    <b>204K</b>
+                </div>
+            </div>
+        
+            <div class="track-item" onclick="playTrack('track3', 'a1.mp3', 'k3.png')">
+                <img src="k3.png" alt="Track Image" class="track-image">
+                <div class="track-info">
+                    <p class="track-title" id="track3-title">Shattered Keys</p>
+                    <p class="track-author" id="track3-author">Khoa Anh | K/A Studio</p>
+                </div>
+                <div class="heart-info">
+                    <span class="material-icons" id="heart3" onclick="toggleHeart(event)">favorite_border</span>
+                    <b>6K</b>
+                </div>
+            </div>
+        
+            <div class="track-item" onclick="playTrack('track4', 'The Cursed Love.mp3', 'k5.png')">
+                <img src="k5.png" alt="Track Image" class="track-image">
+                <div class="track-info">
+                    <p class="track-title" id="track4-title">The Cursed Love</p>
+                    <p class="track-author" id="track4-author">Khoa Anh | K/A Studio</p>
+                </div>
+                <div class="heart-info">
+                    <span class="material-icons" id="heart4" onclick="toggleHeart(event)">favorite_border</span>
+                    <b>3M</b>
+                </div>
+            </div>
+        
+            <div class="track-item" onclick="playTrack('track5', 'Lost Love.mp3', 'k2.png')">
+                <img src="k2.png" alt="Track Image" class="track-image">
+                <div class="track-info">
+                    <p class="track-title" id="track5-title">Lost Love</p>
+                    <p class="track-author" id="track5-author">Khoa Anh | K/A Studio</p>
+                </div>
+                <div class="heart-info">
+                    <span class="material-icons" id="heart5" onclick="toggleHeart(event)">favorite_border</span>
+                    <b>21K</b>
+                    
+                </div>
+                
+            </div>
+            <div class="chu">
+                <i>Team của Khoa sẽ còn sáng tác thêm | @khoadev23</i>
+            </div>
+            
+            <br>
+<br>
+<br>
+<br>
+<br>
+        </div>
+    </div>
+</div>
+        <!-- Music Player Section -->
+        <div class="player-container" id="player">
+            <div class="player-header">
+                <img src="khoa.png" alt="Track Image" id="player-image" class="player-image">
+                <div class="player-info">
+                    <p id="player-title">Hãy chọn nhạc</p>
+                    <p id="player-author">Khoa Anh | K/A Studio</p>
+                </div>
+            </div>
+            <div class="player-controls">
+                <span class="material-icons" id="heart-player" onclick="toggleHeart(event)">favorite_border</span>
+                <span class="material-icons" id="play-pause" onclick="togglePlayPause()">play_arrow</span>
+                <a href="#" id="download-btn" onclick="downloadTrack()" download>
+                    <span class="material-icons">file_download</span>
+                </a>
+            </div>
+            <div class="progress-container">
+                <input type="range" id="progress-bar" value="0" step="1" min="0" max="100" onchange="seekMusic()" />
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
